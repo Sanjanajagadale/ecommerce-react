@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import product from './data.js'
-import Navbar from '../Component/Navbar.jsx';
+
 import Card from '../Component/Card.jsx'
 
 
-<Component />
 
 
-const Dashboard = (product) => {
+
+const Dashboard = () => {
     const [productState, setProductState] = useState(product);
     return (
         <>
-            <Navbar />
+        
 
 
 

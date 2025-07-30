@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import RegisterPage from './Pages/RegisterPage'
 import LoginPage from './Pages/LoginPage'
+import Dashboard from './Pages/Dashboard'
 
 
 function App() {
@@ -9,9 +10,12 @@ function App() {
 
   return (
     <>
+    
     {isRegister ? (<LoginPage/>) : ( <RegisterPage setIsRegister={setIsRegister} />)}
       {/*<RegisterPage/>
       <LoginPage/>*/}
+      <Dashboard/>
+     
     </>
   )
 }

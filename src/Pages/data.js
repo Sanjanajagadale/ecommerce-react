@@ -1,4 +1,4 @@
-product=[
+ const product=[
   {
     "category": "Dairy & Beverages",
     "name": "Amul Milk",
