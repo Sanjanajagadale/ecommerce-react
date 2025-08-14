@@ -1,6 +1,30 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import {AuthContext} from "/Component../AuthContext"
+import Dashboard from './Dashboard';
+
 
 const LoginPage = () => {
+const [email,setEmail]=useState();
+const[password,setPassword]=useState("");
+const navigate= useNavigate();
+
+
+const { loggedUser,login} =useContext(AuthContext);
+function handleLogin(e){
+  e.preventDefault();
+  console.log(email,password);
+  try{
+const msg =login (email,password);
+if(msg){
+  alert(msg);
+  navigate('/dashboard');
+}else
+  alert("invalide creadientiate")
+  navigate("/")
+  }catch(error){
+    console.log(error)
+  }
+}
   return (
     <div className='container w-40 shadow-lg p-3 mb-5 bg-body rounded'>
     <form>
